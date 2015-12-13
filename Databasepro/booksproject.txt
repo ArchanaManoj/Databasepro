@@ -1,0 +1,26 @@
+
+01,The Lost Tribe,Tate Publishing
+02,H is for Hawk, Group West Publishers
+03,Dead Wake, Bantam House
+04,Orhan's Inheritance, Alonquin Books
+05,The Animals, Liveright Publishing
+06,Finders Keepers,Scribner
+07,The Hiding Place,The Chosen Books
+08,Malcolm X,Ballantine Books
+09,The Last of The Mohicans,Bantam Classics
+10,The Hunger Games,Scolastic Press
+11,Gone With The Wind,Grand Central
+12,Wuthering Heights,W W Norton and Company
+13,Of Mice and Men,Penguin
+14,The Princess Bride,Ballantine Books
+15,The Catcher in the Rye,Back Bay Books
+16,The Bazaar of Bad Dreams,Scribner
+17,The Slaughterhouse-Five,Dial Press Trade
+18,Anna Karenina,Vintage
+19,The Shining,Hodder and Stoughton
+20,To Kill a Mocking Bird,Harper Perennial
+
+
+
+
+

@@ -1,0 +1,82 @@
+use master
+go
+--want to drop databse only after check
+if exists (select * from sys.databases where [name]= 'archpro1')
+drop database archpro1
+go
+create database archpro1
+go
+use archpro1
+
+********************************************
+
+use master
+go
+--want to drop databse only after check
+if exists (select * from sys.databases where [name]= 'dBcar')
+drop database dBcar
+go
+create database dBcar
+go
+use dBcar
+
+create table tblCar
+(
+c_id int primary key,
+c_make varchar(25) not null,
+c_model varchar(25) not null,
+c_year int null
+)
+
+*******************************************
+
+select *
+from tblMovie
+
+insert into tblmovie
+values (3,'The Departed',115,'R'),
+(4,'The Shining',98,'R'),
+(5,'Home Alone',90,'G'),
+(6,'Breakfast At Tiffany''s',105,'G')
+****************************************
+
+use master
+go
+if exists(select * from sys.databases where [name] = 'JProCo1')
+drop database JProCo1
+go
+create database JProCo1
+go
+use JProCo1
+go
+create table Customer
+(
+CustomerID int primary key,
+CustomerType varchar(30) not null,
+FirstName varchar(20) null,
+LastName varchar(30) null,
+CompanyName varchar(30) null
+)
+
+select *
+from Customer
+
+insert into Customer
+values(1,'Consumer','Mark','Williams',null),
+(2,'Consumer','Lee','Young',null),
+(3,'Consumer','Patricia','Martin',null),
+(4,'Consumer','Mary','Lopez',null)
+
+*******************************************
+begin tran
+
+delete [Grant]
+where GrantID = 004
+
+insert into [Grant]
+values (011,'Seasons Outreach',NULL,85000)
+
+commit tran
+
+select * 
+from [grant]

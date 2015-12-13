@@ -1,0 +1,8 @@
+1202,Alice,Browne,21 East Bently,2123547621
+1203,Bruce,Nero,7 sw lane,9078554432
+1204,Charlie,Chocolate,45 Brown st,5554443391
+1205,Einstein,Freeway,301 relative Dr,7764332891
+1206,Frank,Shepherd,52 Sinatra Pl,8623112310
+1207,Claus,Prestly,238 Santa Ct,8887772220
+1208,Rosa,Everdene,764 Parks Lane,1200310567
+1209,Theodore,Felman,444 Roosevelt Park,3455232290

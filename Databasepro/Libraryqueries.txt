@@ -1,0 +1,70 @@
+1) create proc Getnocopiesinbranch @Bookname varchar(50),@BranchName varchar(50)
+as
+select LB.BranchID,LB.BranchName,B.Title,B.PublisherName,BC.No_of_Copies
+from LIBRARY_BRANCH as LB inner join BOOK_COPIES as BC
+on LB.BranchID = BC.BranchID
+inner join BOOK as B
+on BC.BookID = B.BookID
+where LB.BranchName = @BranchName
+and B.Title = @Bookname
+
+
+___________________________________
+
+2) create Proc getcopiesinallbranch @BookName varchar(50)
+as
+select *
+from LIBRARY_BRANCH as LB inner join BOOK_COPIES as BC
+on LB.BranchID = BC.BranchID
+inner join BOOK as B
+on BC.BookID = B.BookID
+where B.Title = @BookName
+
+__________________________________________
+
+3) create proc getborrowernotcheckdout 
+as
+select BR.FirstName, BR.LastName,BR.CardNo
+from BOOK_LOANS as BL full outer join BORROWER as BR
+on BL.CardNo = BR.CardNo
+where BookID is null
+_______________________________________________
+
+4)create Proc gettodaysborrower @today date
+as
+
+select B.Title,BR.FirstName,BR.LastName,BR.[Address]
+from LIBRARY_BRANCH as LB inner join BOOK_LOANS as BL
+on LB.BranchID = BL.BranchID
+inner join BOOK as B
+on BL.BookID = B.BookID
+inner join BORROWER as BR
+on Bl.CardNo = BR.CardNo
+
+where BL.DueDate = @today
+__________________________________________
+
+5)create Proc getnoloaned 
+as
+select LB.BranchName, count(*)as BooksLoaned
+from LIBRARY_BRANCH as LB full outer join BOOK_LOANS as BL
+on LB.BranchID = BL.BranchID
+Group by LB.BranchName
+______________________________________________
+6)select  BR.FirstName, BR.LastName,COUNT(BR.CardNo) as Noofbooks, BR.CardNo
+from BORROWER as BR full outer join BOOK_LOANS as BL
+on BR.CardNo = BL.CardNo
+Group by BR.FirstName, BR.LastName, BR.CardNo
+having count(BR.CardNo) >5
+
+_________________________________________________
+7)select B.Title, BC.No_of_Copies
+from BOOK_AUTHORS as BA full outer join BOOK_COPIES as BC
+on BA.BookID = BC.BookID
+full outer join LIBRARY_BRANCH as LB
+on LB.BranchID = BC.BranchID
+full outer join BOOK as B
+on B.BookID = BC.BookID
+where BA.AuthorName = 'Stephen King' and LB.BranchName = 'Central'
+group by B.Title, BC.No_of_Copies
+

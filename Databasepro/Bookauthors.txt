@@ -1,0 +1,20 @@
+01,Shannon Tilbury
+02,Helen MacDonald
+03,Erik Larson,
+04,Aline Ohanesian
+05,Chrisitan Keifer
+06,Stephen King
+07,Corrie Ten Boom and Elizabeth Sherill
+08,Malcolm X and Alex Haley
+09,James Fenimore Cooper
+10,Suzanne Collins
+11,Margaret Mitchell
+12,Emily Bronte
+13,John Steinbeck
+14,William Goldman
+15,J D Salinger
+16,Stephen King
+17,Kurt Vonnegut
+18,Leo Tolstoy
+19,Stephen King
+20,Harper Lee
